@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curbelo El Jalapeño — jalapeños artesanales con identidad mexicano-argentina. Elaboración 100% artesanal, sabor único y picante equilibrado.">
+    <!-- Autor y robots -->
+  <meta name="author" content="Curbelo El Jalapeño">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="Curbelo El Jalapeño">
+  <meta property="og:description" content="Jalapeños artesanales con identidad mexicano-argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://curbeloeljalapenio.com">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Producto | Curbelo El Jalapeño</title>
+</head>
+
+<body>
+
+   <header>
+     <nav class="nav">
+           <a href="index.html"><img src="img/logo.png" alt="Logo Cubelo el Jalapeño"></a>
+        <ul class="menu" id="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="producto.html"  class="activo">Producto</a></li>
+            <li><a href="recetas.html">Recetas</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+            <div class="carrito">
+           <a href="tienda.html"><img src="img/carrito.png" alt="Carrito de compra"></a>
+            </div>
+
+            <button class="nav__hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+      </nav>
+
+     </header>
+
+     <main>
+
+    <section class="producto-detalle">
+      <div class="producto-imagen">
+        <img src="img/frasco.png" alt="Frasco de jalapeños artesanales Curbelo">
+      </div>
+      <div class="producto-info">
+        <h1>Jalapeños Artesanales</h1>
+        <p class="producto-descripcion">
+          Un jalapeño de verdad. Picante equilibrado, el punto justo para disfrutarlo en cualquier comida. 
+          Elaborado 100% de forma artesanal, todo cortado y cocinado a mano.
+        </p>
+
+        <div class="producto-ingredientes">
+          <h2>Ingredientes</h2>
+          <p>Jalapeños, cebolla, zanahoria, ajo, cocinado en especias.</p>
+        </div>
+
+        <div class="producto-presentacion">
+          <h2>Presentación</h2>
+          <p>Frasco de 250g, ideal para tener siempre en la mesa.</p>
+        </div>
+
+        <div class="producto-botones">
+          <a href="tienda.html" class="btn-comprar">Comprar</a>
+          <a href="recetas.html" class="btn-recetas">Ver recetas</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+   <footer>
+      <p>© 2026 Curbelo El Jalapeño. Todos los derechos reservados.</p>
+      <div class="infofooter">
+      <p><a href="contacto.html">Contacto</a></p>
+      <a href="https://www.instagram.com/curbeloeljalapenio/"><img src="img/instagram.png" alt="Instagram Curbelo El Jalapeño"></a>
+      </div>
+    </footer>
+
+    <script>
+      const hamburguesa = document.getElementById('hamburguesa');
+      const menu = document.getElementById('menu');
+
+      hamburguesa.addEventListener('click', () => {
+        menu.classList.toggle('abierto');
+      });
+    </script>
+
+ </body>
+ </html>

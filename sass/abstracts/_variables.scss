@@ -1,0 +1,47 @@
+// --- Colores ---
+$color-primario:    rgb(226, 58, 16);
+$color-secundario:  #27a102;
+$color-acento:      rgb(25, 209, 233);
+$color-rojo-texto:  red;
+$color-blanco:      #ffffff;
+$color-negro:       #111111;
+$color-gris-claro: #f5f5f5;
+
+// --- Tipografía ---
+$font-principal:    system-ui, -apple-system, sans-serif;
+$font-size-base:    16px;
+$font-size-sm:      0.875rem;
+$font-size-md:      1rem;
+$font-size-lg:      1.2rem;
+$font-size-xl:      1.5rem;
+$font-size-2xl:     2rem;
+
+$font-weight-normal: 400;
+$font-weight-medium: 500;
+$font-weight-semi:   600;
+$font-weight-bold:   700;
+
+// --- Espaciado ---
+$espaciado-xs:  0.5rem;
+$espaciado-sm:  1rem;
+$espaciado-md:  2rem;
+$espaciado-lg:  3rem;
+$espaciado-xl:  4rem;
+
+// --- Tamaños ---
+$alto-header:   110px;
+$alto-banner:   450px;
+
+// --- Bordes ---
+$border-radius-md: 20px;
+
+// --- Transiciones ---
+$transicion-normal: all 0.4s ease;
+
+// --- Sombras ---
+$sombra-texto: 0 2px 6px rgba(0, 0, 0, 0.8);
+
+// --- Breakpoints ---
+$bp-mobile:  576px;
+$bp-tablet:  768px;
+$bp-desktop: 1024px;

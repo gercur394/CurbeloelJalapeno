@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
+
+// --- Hero ---
+.nosotros-hero {
+  @include hero-base(calc($alto-banner / 2));
+  @include overlay;
+  background-image: url(../img/bannernosotros.avif);
+  background-position: center;
+
+  .nosotros-hero-contenido {
+    @extend %sobre-overlay;
+
+    h1 {
+      @include texto-banner;
+      font-size: clamp(2rem, 5vw, 4rem);
+    }
+  }
+}
+
+// --- Historia ---
+.nosotros-historia {
+  @include seccion-padding;
+  max-width: 750px;
+  margin: 0 auto;
+  text-align: center;
+
+  h2 {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+    color: $color-primario;
+    margin-bottom: $espaciado-md;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    line-height: 1.8;
+    color: $color-negro;
+    margin-bottom: $espaciado-sm;
+  }
+}
+
+// --- Valores ---
+.nosotros-valores {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: $espaciado-md;
+  padding: $espaciado-md $espaciado-md;
+  margin-bottom: $espaciado-xl;
+
+  .valor-card {
+    text-align: center;
+    padding: $espaciado-sm;
+    border-radius: $border-radius-md;
+    background-color: $color-secundario;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+
+    span {
+      font-size: $font-size-2xl;
+    }
+
+    h3 {
+      color: $color-blanco;
+      font-size: $font-size-xl;
+      margin: $espaciado-sm 0 $espaciado-xs 0;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: $font-size-md;
+      line-height: 1.6;
+      font-weight: $font-weight-semi;
+    }
+  }
+
+  // --- Responsive ---
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+}

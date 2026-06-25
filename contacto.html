@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curbelo El Jalapeño — jalapeños artesanales con identidad mexicano-argentina. Elaboración 100% artesanal, sabor único y picante equilibrado.">
+    <!-- Autor y robots -->
+  <meta name="author" content="Curbelo El Jalapeño">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="Curbelo El Jalapeño">
+  <meta property="og:description" content="Jalapeños artesanales con identidad mexicano-argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://curbeloeljalapenio.com">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Contacto | Curbelo El Jalapeño</title>
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html"><img src="img/logo.png" alt="Logo Curbelo El Jalapeño"></a>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="producto.html">Producto</a></li>
+        <li><a href="recetas.html">Recetas</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
+      <div class="carrito">
+        <a href="tienda.html"><img src="img/carrito.png" alt="Carrito de compras"></a>
+      </div>
+
+      <button class="nav__hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="contacto-hero">
+      <h1>Contacto</h1>
+      <p>¿Tenés alguna consulta o pedido? Escribinos.</p>
+    </section>
+
+    <section class="contacto-form">
+      <form action="mailto:contacto@curbeloeljalapenio.com" method="POST" enctype="text/plain">
+        
+        <div class="form-grupo">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="Tu email" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="asunto">Asunto</label>
+          <input type="text" id="asunto" name="asunto" placeholder="Asunto del mensaje" required>
+        </div>
+
+        <div class="form-grupo">
+          <label for="mensaje">Mensaje</label>
+          <textarea id="mensaje" name="mensaje" rows="6" placeholder="Escribí tu mensaje acá" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-enviar">Enviar mensaje</button>
+
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Curbelo El Jalapeño. Todos los derechos reservados.</p>
+    <div class="infofooter">
+      <p><a href="contacto.html">Contacto</a></p>
+      <a href="https://www.instagram.com/curbeloeljalapenio/">
+        <img src="img/instagram.png" alt="Instagram Curbelo El Jalapeño">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+      const hamburguesa = document.getElementById('hamburguesa');
+      const menu = document.getElementById('menu');
+
+      hamburguesa.addEventListener('click', () => {
+        menu.classList.toggle('abierto');
+      });
+    </script>
+
+</body>
+</html>

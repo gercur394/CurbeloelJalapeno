@@ -1,0 +1,15 @@
+@use '../abstracts/variables' as *;
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: $font-weight-bold;
+  line-height: 1.1;
+}
+
+p {
+  line-height: 1.5;
+}
+
+// --- Colores de bandera en palabras ---
+.rojo    { color: $color-rojo-texto; }
+.verde   { color: $color-secundario; }
+.celeste { color: $color-acento; }

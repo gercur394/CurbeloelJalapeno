@@ -1,0 +1,266 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
+
+// --- Hero ---
+.tienda-hero {
+  background-color: $color-primario;
+  text-align: center;
+  margin-top: 25px;
+  @include seccion-padding;
+
+  h1 {
+    @include texto-banner;
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: $font-size-lg;
+    margin-top: $espaciado-xs;
+  }
+}
+
+// --- Producto ---
+.tienda-producto {
+  @extend %contenedor;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espaciado-xl;
+  align-items: center;
+  @include seccion-padding;
+
+  // --- Responsive ---
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .tienda-producto-imagen {
+    img {
+      width: 100%;
+      border-radius: $border-radius-md;
+    }
+  }
+
+  .tienda-producto-info {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-sm;
+
+    h2 {
+      font-size: clamp(1.8rem, 3vw, 2.5rem);
+      color: $color-negro;
+    }
+
+    .tienda-descripcion {
+      font-size: $font-size-lg;
+      color: $color-negro;
+    }
+
+    .tienda-precio {
+      font-size: $font-size-2xl;
+      font-weight: $font-weight-bold;
+      color: $color-primario;
+    }
+  }
+}
+
+// --- Cantidad ---
+.tienda-cantidad {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-xs;
+
+  label {
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+    color: $color-negro;
+  }
+
+  .cantidad-control {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-xs;
+
+    button {
+      width: 40px;
+      height: 40px;
+      background-color: $color-primario;
+      color: $color-blanco;
+      border: none;
+      border-radius: $border-radius-md;
+      font-size: $font-size-xl;
+      cursor: pointer;
+      transition: $transicion-normal;
+
+      &:hover {
+        background-color: $color-negro;
+      }
+    }
+
+    input {
+      width: 70px;
+      height: 40px;
+      text-align: center;
+      border: 2px solid #dddddd;
+      border-radius: $border-radius-md;
+      font-size: $font-size-lg;
+      font-weight: $font-weight-medium;
+      color: $color-negro;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primario;
+      }
+    }
+  }
+}
+
+.tienda-subtotal {
+  font-size: $font-size-lg;
+  color: $color-negro;
+  font-weight: $font-weight-medium;
+}
+
+// --- Formulario ---
+.tienda-form {
+  @extend %contenedor;
+  padding-bottom: $espaciado-xl;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas:
+    "datos    pago"
+    "datos    tarjeta"
+    "resumen  resumen";
+  gap: $espaciado-lg;
+
+   // --- Responsive ---
+  @include tablet {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "datos"
+      "pago"
+      "tarjeta"
+      "resumen";
+  }
+}
+
+.tienda-form-bloque {
+  background-color: $color-gris-claro;
+  padding: $espaciado-md;
+  border-radius: $border-radius-md;
+
+  h2 {
+    font-size: $font-size-xl;
+    color: $color-primario;
+    margin-bottom: $espaciado-md;
+  }
+
+  .form-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-xs;
+    margin-bottom: $espaciado-sm;
+
+    label {
+      font-size: $font-size-md;
+      font-weight: $font-weight-medium;
+      color: $color-negro;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem $espaciado-sm;
+      border: 2px solid #dddddd;
+      border-radius: $border-radius-md;
+      font-size: $font-size-md;
+      color: $color-negro;
+      transition: $transicion-normal;
+
+      &:focus {
+        outline: none;
+        border-color: $color-primario;
+      }
+
+      &::placeholder {
+        color: #aaaaaa;
+      }
+    }
+  }
+}
+
+// --- Método de pago ---
+.metodo-pago {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-sm;
+
+  .metodo-opcion {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-xs;
+    font-size: $font-size-lg;
+    color: $color-negro;
+    cursor: pointer;
+
+    input[type="radio"] {
+      width: 18px;
+      height: 18px;
+      accent-color: $color-primario;
+    }
+  }
+}
+
+// --- Fila tarjeta ---
+.tienda-tarjeta-fila {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espaciado-sm;
+}
+
+// --- Resumen ---
+.tienda-resumen {
+  background-color: $color-gris-claro;
+  padding: $espaciado-md;
+  border-radius: $border-radius-md;
+  grid-area: resumen;
+
+  h2 {
+    font-size: $font-size-xl;
+    color: $color-primario;
+    margin-bottom: $espaciado-md;
+  }
+
+  .resumen-linea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: $espaciado-xs 0;
+    border-bottom: 1px solid #dddddd;
+    font-size: $font-size-md;
+    color: $color-negro;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
+  .resumen-total {
+    font-size: $font-size-lg;
+    font-weight: $font-weight-bold;
+    color: $color-primario;
+    margin-top: $espaciado-xs;
+  }
+}
+
+.btn-confirmar {
+  @include boton-base;
+  width: 100%;
+  text-align: center;
+  margin-top: $espaciado-md;
+}
+
+// --- Areas del formulario ---
+.tienda-form-bloque:nth-child(1) { grid-area: datos; }
+.tienda-form-bloque:nth-child(2) { grid-area: pago; }
+.tienda-form-bloque:nth-child(3) { grid-area: tarjeta; }

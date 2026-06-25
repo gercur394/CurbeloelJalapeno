@@ -1,0 +1,101 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
+
+// --- Hero ---
+.recetas-hero {
+  @include hero-base(calc($alto-banner / 2));
+  @include overlay;
+  background-image: url(../img/bannerrecetas.png);
+  background-position: center 40%;
+
+  .recetas-hero-contenido {
+    @extend %sobre-overlay;
+
+    h1 {
+      @include texto-banner;
+      font-size: clamp(2rem, 5vw, 4rem);
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: $font-size-lg;
+      margin-top: $espaciado-xs;
+    }
+  }
+}
+
+// --- Lista de recetas ---
+.recetas-lista {
+  @extend %contenedor;
+  @include seccion-padding;
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-xl;
+}
+
+// --- Bloque de receta ---
+.receta-bloque {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espaciado-lg;
+  align-items: center;
+
+    // --- Responsive ---
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+
+  .receta-imagen {
+    img {
+      width: 100%;
+      height: 350px;
+      object-fit: cover;
+      border-radius: $border-radius-md;
+    }
+  }
+
+  .receta-contenido {
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      color: $color-primario;
+      margin-bottom: $espaciado-md;
+    }
+
+    h3 {
+      font-size: $font-size-lg;
+      color: $color-negro;
+      margin-bottom: $espaciado-xs;
+    }
+
+    ul {
+      list-style: disc;
+      padding-left: $espaciado-md;
+      margin-bottom: $espaciado-md;
+
+      li {
+        font-size: $font-size-md;
+        line-height: 1.8;
+        color: $color-negro;
+      }
+    }
+
+    p {
+      font-size: $font-size-md;
+      line-height: 1.8;
+      color: $color-negro;
+    }
+  }
+}
+
+// --- Receta invertida ---
+.receta-invertida {
+  .receta-imagen { order: 2; }
+  .receta-contenido { order: 1; }
+
+   // --- Responsive ---
+  @include tablet {
+    .receta-imagen { order: 1; }
+    .receta-contenido { order: 2; }
+  }
+}

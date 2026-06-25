@@ -1,0 +1,129 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: $alto-header;
+  padding: 0 $espaciado-md;
+
+  img {
+    height: 120px;
+    transition: $transicion-normal;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 50px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  a {
+    text-decoration: none;
+    color: $color-blanco;
+    font-size: $font-size-lg;
+    transition: $transicion-normal;
+
+    &:hover {
+      color: $color-secundario;
+    }
+
+    &.activo {
+      color: $color-secundario;
+      border-bottom: 2px solid $color-secundario;
+    }
+  }
+}
+
+.carrito img {
+  height: 50px;
+  transition: $transicion-normal;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
+// --- Hamburguesa ---
+.nav__hamburguesa {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  padding: $espaciado-xs;
+  background: none;
+  border: none;
+
+  span {
+    display: block;
+    width: 28px;
+    height: 3px;
+    background-color: $color-blanco;
+    border-radius: 2px;
+    transition: $transicion-normal;
+  }
+}
+
+// --- Responsive ---
+@include tablet {
+   .nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    position: relative;
+
+    a:first-child {
+      justify-self: start;
+    }
+
+    .nav__hamburguesa {
+      display: flex;
+      justify-self: end;
+      order: 3;
+    }
+
+    .carrito {
+      justify-self: center;
+      order: 2;
+    }
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: $alto-header;
+    left: 0;
+    right: 0;
+    background-color: $color-primario;
+    flex-direction: column;
+    gap: 0;
+    padding: $espaciado-sm 0;
+    z-index: 99;
+
+    &.abierto {
+      display: flex;
+    }
+
+    a {
+      display: block;
+      padding: $espaciado-sm $espaciado-md;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
+}
+
+@include mobile {
+  .nav {
+    height: 80px;
+  }
+
+  .nav img {
+    height: 85px;
+  }
+}

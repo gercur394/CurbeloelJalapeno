@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Curbelo El Jalapeño — jalapeños artesanales con identidad mexicano-argentina. Elaboración 100% artesanal, sabor único y picante equilibrado.">
+    <!-- Autor y robots -->
+  <meta name="author" content="Curbelo El Jalapeño">
+  <meta name="robots" content="index, follow">
+  <!-- Open Graph (para compartir en redes sociales) -->
+  <meta property="og:title" content="Curbelo El Jalapeño">
+  <meta property="og:description" content="Jalapeños artesanales con identidad mexicano-argentina.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://curbeloeljalapenio.com">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>Nosotros | Curbelo El Jalapeño</title>
+</head>
+<body>
+
+  <header>
+    <nav class="nav">
+      <a href="index.html"><img src="img/logo.png" alt="Logo Curbelo El Jalapeño"></a>
+      <ul class="menu" id="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html" class="activo">Nosotros</a></li>
+        <li><a href="producto.html">Producto</a></li>
+        <li><a href="recetas.html">Recetas</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+      <div class="carrito">
+        <a href="tienda.html"><img src="img/carrito.png" alt="Carrito de compras"></a>
+      </div>
+
+      <button class="nav__hamburguesa" id="hamburguesa" aria-label="Abrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <main>
+
+    <section class="nosotros-hero">
+      <div class="nosotros-hero-contenido">
+        <h1>Nuestra Historia</h1>
+      </div>
+    </section>
+
+    <section class="nosotros-historia">
+      <h2>De México a la mesa argentina</h2>
+      <p>
+        Todo empezó con un viaje. Luciano Curbelo, viajó a México para descubrir su cultura y sus sabores. 
+        Fue allí donde encontró la receta tradicional de jalapeños en escabeche 
+        y se enamoró de su equilibrio perfecto.
+      </p>
+      <p>
+        De vuelta en Argentina, Luciano empezó a prepararlos de forma artesanal, 
+        tal como aprendió: todo hecho a mano, con los mismos 
+        ingredientes de siempre. Lo que empezó como una receta para compartir 
+        en familia se convirtió en Curbelo El Jalapeño.
+      </p>
+    </section>
+
+    <section class="nosotros-valores">
+      <div class="valor-card">
+        <span>🌶️</span>
+        <h3>Artesanal</h3>
+        <p>Cada frasco se prepara a mano, sin procesos industriales.</p>
+      </div>
+      <div class="valor-card">
+        <span>👨‍👩‍👧</span>
+        <h3>Familiar</h3>
+        <p>Una empresa de familia, con el cuidado y el amor que eso implica.</p>
+      </div>
+      <div class="valor-card">
+        <span>🌍</span>
+        <h3>Tradición</h3>
+        <p>Una receta tradicional mexicana, traída con respeto a la mesa argentina.</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 Curbelo El Jalapeño. Todos los derechos reservados.</p>
+    <div class="infofooter">
+      <p><a href="contacto.html">Contacto</a></p>
+      <a href="https://www.instagram.com/curbeloeljalapenio/">
+        <img src="img/instagram.png" alt="Instagram Curbelo El Jalapeño">
+      </a>
+    </div>
+  </footer>
+
+  <script>
+      const hamburguesa = document.getElementById('hamburguesa');
+      const menu = document.getElementById('menu');
+
+      hamburguesa.addEventListener('click', () => {
+        menu.classList.toggle('abierto');
+      });
+    </script>
+
+</body>
+</html>

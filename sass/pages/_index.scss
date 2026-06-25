@@ -1,0 +1,71 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
+
+.banner {
+  @include hero-base;
+  @include overlay;
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.banner-producto {
+  background-image: url(../img/bannerproducto.png);
+  background-position: center 60%;
+}
+
+.banner-nosotros {
+  background-image: url(../img/bannernosotros.avif);
+  background-position: center;
+}
+
+.banner-receta {
+  background-image: url(../img/bannerrecetas.png);
+  background-position: center 40%;
+}
+
+.banner-texto {
+  @extend %sobre-overlay;
+  width: 100%;
+  @include flex-between;
+  padding: 0 $espaciado-md;
+  animation: fadeInUp 0.8s ease both;
+
+  h2 {
+    max-width: 45%;
+    text-align: center;
+    font-size: clamp(2rem, 4vw, 3.5rem);
+    font-weight: $font-weight-semi;
+    line-height: 1.1;
+    @include texto-banner;
+  }
+
+  a {
+    @include boton-base;
+  }
+
+   // --- Responsive ---
+  @include tablet {
+    flex-direction: column;
+    gap: $espaciado-md;
+    text-align: center;
+
+    h2 {
+      max-width: 90%;
+    }
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

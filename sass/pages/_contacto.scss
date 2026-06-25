@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
+
+// --- Hero ---
+.contacto-hero {
+  background-color: $color-primario;
+  text-align: center;
+  margin-top: 25px;
+  @include seccion-padding;
+
+  h1 {
+    @include texto-banner;
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: $font-size-lg;
+    margin-top: $espaciado-xs;
+  }
+}
+
+// --- Formulario ---
+.contacto-form {
+  @extend %contenedor;
+  @include seccion-padding;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: $espaciado-sm;
+    width: 100%;
+  }
+}
+
+.form-grupo {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-xs;
+  width: 100%;
+
+  label {
+    font-size: $font-size-md;
+    font-weight: $font-weight-medium;
+    color: $color-negro;
+  }
+
+  input,
+  textarea {
+    width: 100%;
+    padding: 0.75rem $espaciado-sm;
+    border: 2px solid #dddddd;
+    border-radius: $border-radius-md;
+    font-size: $font-size-md;
+    color: $color-negro;
+    transition: $transicion-normal;
+
+    &:focus {
+      outline: none;
+      border-color: $color-primario;
+    }
+
+    &::placeholder {
+      color: #aaaaaa;
+    }
+  }
+
+  textarea {
+    resize: vertical;
+  }
+}
+
+.btn-enviar {
+  @include boton-base;
+  width: 100%;
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+@use '../abstracts/variables' as *;
+
+footer {
+  background-color: $color-primario;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: $espaciado-sm $espaciado-md;
+
+  p {
+    color: $color-blanco;
+  }
+
+  .infofooter {
+    display: flex;
+    align-items: center;
+    gap: $espaciado-lg;
+
+    img {
+      width: 80px;
+      transition: $transicion-normal;
+
+      &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+    a {
+      text-decoration: none;
+      color: $color-blanco;
+      font-size: $font-size-lg;
+      
+    }
+  }
+}

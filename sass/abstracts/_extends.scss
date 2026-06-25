@@ -1,0 +1,53 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+// --- Contenedor centrado ---
+%contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 $espaciado-md;
+}
+
+// --- Imagen que cubre su contenedor ---
+%img-cover {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+// --- Lista sin estilos ---
+%lista-limpia {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+// --- Link sin subrayado ---
+%link-limpio {
+  text-decoration: none;
+  color: inherit;
+}
+
+// --- Contenido sobre overlay ---
+%sobre-overlay {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+}
+
+// --- Hero contenido ---
+%hero-contenido {
+  @extend %sobre-overlay;
+
+  h1 {
+    @include texto-banner;
+    font-size: clamp(2rem, 5vw, 4rem);
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: $font-size-lg;
+    margin-top: $espaciado-xs;
+  }
+}

@@ -1,0 +1,86 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
+
+.producto-detalle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: $espaciado-xl;
+  align-items: center;
+  padding: $espaciado-md $espaciado-md;
+
+  @include tablet {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+.producto-imagen {
+  img {
+    width: 100%;
+    border-radius: $border-radius-md;
+  }
+}
+
+.producto-info {
+  display: flex;
+  flex-direction: column;
+  gap: $espaciado-md;
+
+  h1 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: $color-negro;
+  }
+
+  h2 {
+    font-size: $font-size-xl;
+    color: $color-primario;
+    margin-bottom: $espaciado-xs;
+  }
+
+  p {
+    font-size: $font-size-lg;
+    line-height: 1.7;
+    color: $color-negro;
+  }
+}
+
+.producto-botones {
+  display: flex;
+  gap: $espaciado-sm;
+  margin-top: $espaciado-sm;
+}
+
+.btn-comprar {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  background-color: $color-primario;
+  color: $color-blanco;
+  border-radius: $border-radius-md;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  transition: $transicion-normal;
+
+  &:hover {
+    background-color: $color-negro;
+    color: $color-blanco;
+  }
+}
+
+.btn-recetas {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  background-color: $color-secundario;
+  color: $color-blanco;
+  border-radius: $border-radius-md;
+  font-size: $font-size-lg;
+  font-weight: $font-weight-medium;
+  transition: $transicion-normal;
+
+  &:hover {
+    background-color: $color-negro;
+    color: $color-blanco;
+  }
+}
