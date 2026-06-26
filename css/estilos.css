@@ -352,14 +352,14 @@ footer .infofooter a {
   cursor: pointer;
 }
 .btn-comprar:hover {
-  background-color: #ffffff;
-  color: rgb(226, 58, 16);
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .btn-recetas {
   display: inline-block;
   padding: 0.8rem 2rem;
-  background-color: #27a102;
+  background-color: rgb(226, 58, 16);
   color: #ffffff;
   border-radius: 20px;
   text-decoration: none;
@@ -370,8 +370,8 @@ footer .infofooter a {
   cursor: pointer;
 }
 .btn-recetas:hover {
-  background-color: #ffffff;
-  color: #27a102;
+  background-color: #111111;
+  color: #ffffff;
 }
 
 .nosotros-hero {
