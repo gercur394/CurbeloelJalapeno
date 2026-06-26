@@ -270,8 +270,8 @@ footer .infofooter a {
   cursor: pointer;
 }
 .banner-texto a:hover {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: rgb(226, 58, 16);
 }
 @media (max-width: 768px) {
   .banner-texto {
@@ -341,33 +341,37 @@ footer .infofooter a {
 .btn-comprar {
   display: inline-block;
   padding: 0.8rem 2rem;
-  text-decoration: none;
   background-color: rgb(226, 58, 16);
   color: #ffffff;
   border-radius: 20px;
+  text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
   transition: all 0.4s ease;
+  border: none;
+  cursor: pointer;
 }
 .btn-comprar:hover {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: rgb(226, 58, 16);
 }
 
 .btn-recetas {
   display: inline-block;
   padding: 0.8rem 2rem;
-  text-decoration: none;
   background-color: #27a102;
   color: #ffffff;
   border-radius: 20px;
+  text-decoration: none;
   font-size: 1.2rem;
   font-weight: 500;
   transition: all 0.4s ease;
+  border: none;
+  cursor: pointer;
 }
 .btn-recetas:hover {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #27a102;
 }
 
 .nosotros-hero {
@@ -617,8 +621,8 @@ footer .infofooter a {
   cursor: pointer;
 }
 .btn-enviar:hover {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: rgb(226, 58, 16);
 }
 .btn-enviar {
   width: 100%;
@@ -848,8 +852,8 @@ footer .infofooter a {
   cursor: pointer;
 }
 .btn-confirmar:hover {
-  background-color: #111111;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: rgb(226, 58, 16);
 }
 .btn-confirmar {
   width: 100%;
