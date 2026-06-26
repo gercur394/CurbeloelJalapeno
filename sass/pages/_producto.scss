@@ -52,35 +52,10 @@
 }
 
 .btn-comprar {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  text-decoration: none;
-  background-color: $color-primario;
-  color: $color-blanco;
-  border-radius: $border-radius-md;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-medium;
-  transition: $transicion-normal;
-
-  &:hover {
-    background-color: $color-negro;
-    color: $color-blanco;
-  }
+  @include boton-base($color-primario, $color-blanco);
 }
 
-.btn-recetas {
-  display: inline-block;
-  padding: 0.8rem 2rem;
-  text-decoration: none;
-  background-color: $color-secundario;
-  color: $color-blanco;
-  border-radius: $border-radius-md;
-  font-size: $font-size-lg;
-  font-weight: $font-weight-medium;
-  transition: $transicion-normal;
 
-  &:hover {
-    background-color: $color-negro;
-    color: $color-blanco;
-  }
+.btn-recetas {
+  @include boton-base($color-secundario, $color-blanco);
 }
