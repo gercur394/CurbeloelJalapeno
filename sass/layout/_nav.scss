@@ -74,29 +74,31 @@
 // --- Responsive ---
 @include tablet {
    .nav {
-    display: grid;
-    grid-template-columns: 1fr auto 1fr;
-    position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-areas: "logo hamburguesa carrito";
+  position: relative;
 
-    a:first-child {
-      justify-self: start;
-    }
+  a:first-child {
+    grid-area: logo;
+    justify-self: start;
+  }
 
-   .carrito {
-      justify-self: center;
-      order: 2;
+  .carrito {
+    grid-area: carrito;
+    justify-self: end;
 
-      img {
-        height: 35px;
-      }
-    }
-
-    .nav__hamburguesa {
-      display: flex;
-      justify-self: end;
-      order: 3;
+    img {
+      height: 35px;
     }
   }
+
+  .nav__hamburguesa {
+    display: flex;
+    grid-area: hamburguesa;
+    justify-self: center;
+  }
+}
 
   .menu {
     display: none;
