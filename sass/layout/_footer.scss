@@ -1,4 +1,6 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+@use '../abstracts/extends' as *;
 
 footer {
   background-color: $color-primario;
@@ -31,5 +33,19 @@ footer {
       font-size: $font-size-lg;
       
     }
+
+    @include mobile {
+    flex-direction: column;
+    gap: $espaciado-sm;
+    text-align: center;
+
+    .infofooter {
+      gap: $espaciado-md;
+
+      img {
+        width: 40px;
+      }
+    }
+   }
   }
 }
