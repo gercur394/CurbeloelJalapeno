@@ -82,15 +82,19 @@
       justify-self: start;
     }
 
+   .carrito {
+      justify-self: center;
+      order: 2;
+
+      img {
+        height: 35px;
+      }
+    }
+
     .nav__hamburguesa {
       display: flex;
       justify-self: end;
       order: 3;
-    }
-
-    .carrito {
-      justify-self: center;
-      order: 2;
     }
   }
 

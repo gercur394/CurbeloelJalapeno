@@ -136,14 +136,17 @@ header {
   .nav a:first-child {
     justify-self: start;
   }
+  .nav .carrito {
+    justify-self: center;
+    order: 2;
+  }
+  .nav .carrito img {
+    height: 35px;
+  }
   .nav .nav__hamburguesa {
     display: flex;
     justify-self: end;
     order: 3;
-  }
-  .nav .carrito {
-    justify-self: center;
-    order: 2;
   }
   .menu {
     display: none;
