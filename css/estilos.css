@@ -719,6 +719,11 @@ footer .infofooter a {
   font-size: 1.2rem;
   font-weight: 500;
   color: #111111;
+  -moz-appearance: textfield;
+}
+.tienda-cantidad .cantidad-control input::-webkit-inner-spin-button, .tienda-cantidad .cantidad-control input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
 }
 .tienda-cantidad .cantidad-control input:focus {
   outline: none;

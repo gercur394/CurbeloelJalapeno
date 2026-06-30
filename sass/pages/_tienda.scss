@@ -107,6 +107,13 @@
       font-size: $font-size-lg;
       font-weight: $font-weight-medium;
       color: $color-negro;
+      -moz-appearance: textfield;
+
+      &::-webkit-inner-spin-button,
+      &::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
 
       &:focus {
         outline: none;
