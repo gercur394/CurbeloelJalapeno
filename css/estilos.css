@@ -243,7 +243,7 @@ footer .infofooter a {
 }
 
 .banner-producto {
-  background-image: url(../img/bannerproducto.png);
+  background-image: url(../img/bannerproducto.avif);
   background-position: center 60%;
 }
 
@@ -253,7 +253,7 @@ footer .infofooter a {
 }
 
 .banner-receta {
-  background-image: url(../img/bannerrecetas.png);
+  background-image: url(../img/bannerrecetas.avif);
   background-position: center 40%;
 }
 
